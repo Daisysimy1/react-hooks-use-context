@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Themecontext } from "../context/theme"
 
-function ThemedButton({ theme, ...props }) {
+function ThemedButton({ ...props }) {
+  const { theme } = useContext(Themecontext)
+  
   return <button className={theme} {...props} />;
 }
 
